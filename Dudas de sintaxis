@@ -1,0 +1,67 @@
+Sintaxis:                                                                                       
+                                                                                                
+    Windows		    			                        Linux                                   
+                                                                                                
+system("pause") 		=		system("\nread -p '\nPresiona Enter para continuar...' var")    
+system("cls")			=	        system("clear")                                             
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+NOTAS: Yo utilizo Visual studio code como entorno de desarrollo.
+
+En algunos programas veran comentarios "//TODO:" eso es una extesion que resalta la palabra "TODO:"
+y hace mas sencillo identificar comentarios. No tiene mucho misterio, para que no se confundan y 
+piensen que es parte del comentario. Si no tienes la extesion no veras ese resalte en la palabra 
+de color amarillento.
+                                                                                                                                                        
+Si utilizan Visual studio code como entorno de desarrollo deben saber que:                                                                              
+                                                                                                                                                        
+No hace falta incluir la libreria "stdlib.h" para usar:                                                                                                 
+                                                                                                                                                        
+Windows: system("pause") o system("cls")                                                                                                                
+Linux: system("\nread -p '\nPresiona Enter para continuar...' var") o system("clear")                                                                                                                                                                                                                                                                                            
+                                                                                                                                                        
+En la libreria string.h la funcion "strrev()" y la "strupr()" es la funcion para pasar a mayusculas no funcionan, 
+al menos a mi. Si las van a usar y no quieren enrrollarse tanto preferiblemente ejecuenten el codigo en otro compilador.
+
+(Solo si estan usando Visual studio code y alguna funcion o libreria no funciona)  <- ojo
+
+porque hay veces que tiran errores de funciones o librerias y no es especificamente que haya un error de sintaxis si no que el compilador               
+no reconoce dicha libreria o funcion.                                                                                                                   
+                                                                                                                                                        
+Si usas otro compilador o entorno de desarrollo CREO que para usar system("pause") o system("cls") debes incluir la libreria "stdlib.h".                      
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Linux:  
+
+La libreria conio.h por defecto no esta habria que instalarla pasos:
+
+Por terminal:
+
+sudo apt-get upgrade
+sudo apt-get install git (En caso de que no lo tengas)
+sudo git clone 
+ingresan a la carpeta con -> cd conio.h
+copian el archivo conio.h --> !! no la carpeta !! con este comando -> sudo cp conio.h /usr/include
+listo
+
+Graficamente:
+
+Primero bajan el archivo que les dejare aqui mismo en mi repositorio de C++ "conio.h"
+
+luego solo descargan el archivo, ingresan a la carpeta
+luego se van a "su equipo o la raiz" buscan la carpera usr y luego buscan include
+pegan hay el archivo no la carpeta conio.h
+listo
+
+En linux no hace falta poner el system("\nread -p '\nPresiona Enter para continuar...' var") al final de la funcion main                                
+ya que de por si el programa se detendra por si solo y mostrara:                                                                                          
+                                                                                                                                                        
+[1] + Done "/usr/bin/gdb" --interpreter=mi --tty=${DbgTerm} 0<"/tmp/Microsoft-MIEngine-In-ibbndk2s.iet" 1>"/tmp/Microsoft-MIEngine-Out-cb25r6zx.jwi"    
+                                                                                                                                                        
+mostrara el mensaje de Arriba (Linea 57) y luego dira que presione cualquier tecla y se cerrara. Ese mensaje aun no se como                             
+quitarlo pero con el "system("\nread -p '\nPresiona Enter para continuar...' var")" lo que haces es pausar el programa de                               
+igual manera y te dira que presiones Enter y acto seguido aparece el mensaje de la (Linea 57) y se cerrara el programa.                                 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Windows:                                                                                                                                
+Algunos de estos codigos los hice en windows pero hay otros codigos que es la gran mayoria los hice en linux solo vean la sintaxis      
+de los comando de arriba (Linea 5 y 6) de este modo sabran que deben corregir o modificar ya que la sintaxis es casi la misma 
+lo que cambia son ciertas cosas por los sistemas operativos en este caso pongo esas 2 ya que son las que me dieron errores.                                                       
+---------------------------------------------------------------------------------------------------------------------------------------------------------
