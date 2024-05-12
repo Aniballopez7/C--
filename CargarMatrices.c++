@@ -4,37 +4,33 @@
 //  TODO 3.CONTAR LA CANTIDAD DE VECES EN QUE SE ENCUENTRA UN CARACTER EN LA MATRIZ
 //  TODO EN CASO DE QUE NO ENCUENTRE QUE SE MUESTRE QUE NO SE ENCONTRO
 
-// Este inicio viene con el inicio en español de una vez
 #include <iostream>
 #include <clocale>
 #include <stdlib.h>
-#include <random>
 #include <cctype>
 using namespace std;
 
 // TODO LLENAR MATRIZ
 char **llenarMatriz(int &filas, int &columnas)
 {
-    cout << "Ingresa cuantas filas tendra tu matriz: ";
-    cin >> filas;
-    cout << "Ingresa cuantas columnas tendra tu matriz: ";
-    cin >> columnas;
+    cout << "Ingresa cuantas filas tendra tu matriz: ";cin >> filas;
+    cout << "Ingresa cuantas columnas tendra tu matriz: ";cin >> columnas;
+    //? Crear la matriz
     char **matriz = new char *[filas];
     for (int i = 0; i < filas; i++)
     {
         matriz[i] = new char[columnas];
     }
-    // INSERTANDO CARACTERES ALEATORIOS
     for (int i = 0; i < filas; i++)
     {
         for (int j = 0; j < columnas; j++)
         {
-            cout << "\nIngrese una letra: ";
-            cin >> matriz[i][j];
+            cout << "\nIngrese una letra: ";cin >> matriz[i][j];
         }
     }
     return matriz;
 }
+// TODO FUNCION PARA MOSTRAR MATRIZ
 void mostrarMatriz(char **matriz, int filas, int columnas)
 {
     for (int i = 0; i < filas; i++)
@@ -46,7 +42,7 @@ void mostrarMatriz(char **matriz, int filas, int columnas)
         cout << endl;
     }
 }
-// FUNCION PARA CREAR COPIA DE MATRIZ ORIGINAL
+//TODO FUNCION PARA CREAR COPIA DE MATRIZ ORIGINAL
 
 char **matrizCopia(char **matriz, int filas, int columnas)
 {
@@ -64,7 +60,7 @@ char **matrizCopia(char **matriz, int filas, int columnas)
     }
     return matriz2;
 }
-// FUNCION PARA MAYUSCULAS
+//TODO FUNCION PARA MAYUSCULAS
 void matrizMayuscula(char **matriz, int filas, int columnas, char **matriz2)
 {
     matriz2 = matrizCopia(matriz,filas,columnas);
@@ -81,7 +77,7 @@ void matrizMayuscula(char **matriz, int filas, int columnas, char **matriz2)
         cout << endl;
     }
 }
-// FUNCION PARA MINUSCULAS
+//TODO FUNCION PARA MINUSCULAS
 void matrizMinuscula(char **matriz, int filas, int columnas, char **matriz2){
     matriz2 = matrizCopia(matriz,filas,columnas);
     cout << "Matriz original:\n" << endl;
@@ -98,13 +94,12 @@ void matrizMinuscula(char **matriz, int filas, int columnas, char **matriz2){
     }
 }
 
-// FUNCION PARA CONTAR
+//TODO FUNCION PARA CONTAR
 void contarCaracteres(char **matriz, int filas, int columnas)
 {
     int contador = 0;
     char letra;
-    cout << "Ingrese una letra: ";
-    cin >> letra;
+    cout << "Ingrese una letra: ";cin >> letra;
     for (int i = 0; i < filas; i++)
     {
         for (int j = 0; j < columnas; j++)
@@ -117,15 +112,14 @@ void contarCaracteres(char **matriz, int filas, int columnas)
     }
     if (contador == 0)
     {
-        cout << "\nNo se encontro la letra\n"
-             << endl;
+        cout << "\nNo se encontro la letra\n"<< endl;
     }
     else
     {
-        cout << "\nLa letra " << letra << " se repite " << contador << " veces\n"
-             << endl;
+        cout << "\nLa letra " << letra << " se repite " << contador << " veces\n"<< endl;
     }
 }
+// TODO FUNCION DE MENU
 void menu()
 {
     int opc, filas, columnas;
@@ -144,10 +138,8 @@ void menu()
         cout << "3. PASAR MAYUSCULAS TODOS LOS DATOS" << endl;
         cout << "4. PASAR A MINUSCULA TODOS LOS DATOS" << endl;
         cout << "5. CONTAR LA CANTIDAD DE VECES EN QUE SE ENCUENTRA UN CARACTER EN LA MATRIZ" << endl;
-        cout << "6. Salir\n"
-             << endl;
-        cout << "Ingresar una opcion: ";
-        cin >> opc;
+        cout << "6. Salir\n"<< endl;
+        cout << "Ingresar una opcion: ";cin >> opc;
         cout << "\n";
         if ((opc < 1) || (opc > 6))
         {
@@ -197,7 +189,6 @@ void menu()
 }
 int main()
 {
-    setlocale(LC_CTYPE, "Spanish");
     menu();
     cout << "\n";
     system("pause");
