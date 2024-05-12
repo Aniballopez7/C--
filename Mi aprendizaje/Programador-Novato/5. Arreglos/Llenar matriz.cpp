@@ -22,6 +22,6 @@ int main()
         cout<<"\n";
     }
     cout<<"\n";
-    system("\nread -p '\nPresiona Enter para continuar...' var");
+    system("pause");
     return 0;
 }
