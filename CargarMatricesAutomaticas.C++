@@ -67,6 +67,19 @@ void mostrarMatriz(char **matriz, int filas, int columnas)
 {
     for (int i = 0; i < filas; i++)
     {
+        // Mover el cursor a la primera columna de la fila actual
+        gotoxy(0, i + 1); // Sumamos 1 porque los índices empiezan en 0
+        for (int j = 0; j < columnas; j++)
+        {
+            cout << matriz[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+void mostrarMatriz(char **matriz, int filas, int columnas)
+{
+    for (int i = 0; i < filas; i++)
+    {
         for (int j = 0; j < columnas; j++)
         {
             cout << matriz[i][j] << " ";
