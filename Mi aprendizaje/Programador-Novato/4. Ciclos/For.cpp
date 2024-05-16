@@ -6,6 +6,11 @@ int main()
     {
         cout<<i<<"\n";
     }
-    system("\nread -p '\nPresiona Enter para continuar...' var");
+
+    for (int i = 0; i < 5; i++)
+    {
+        cout<<i<<endl;
+    }
+    system("pause");
     return 0;
 }

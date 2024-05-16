@@ -112,7 +112,7 @@ void contarCaracteres(char **matriz, int filas, int columnas)
     }
     if (contador == 0)
     {
-        cout << "\nNo se encontro la letra\n"<< endl;
+        cout << "\nNo se encontro la letra"<< letra << endl;
     }
     else
     {
@@ -123,7 +123,6 @@ void contarCaracteres(char **matriz, int filas, int columnas)
 void menu()
 {
     int opc, filas, columnas;
-    char r;
     bool salir = false;
     char **matriz, **matriz2;
     do
@@ -189,6 +188,7 @@ void menu()
 }
 int main()
 {
+    setlocale(LC_CTYPE,"Spanish");
     menu();
     cout << "\n";
     system("pause");

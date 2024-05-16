@@ -7,5 +7,14 @@ int main()
     p = &num;
     cout<<"Valor: "<<*p<<endl;
     cout<<"Direccion: "<<p<<endl;
-    system("\nread -p '\nPresiona Enter para continuar...' var");
+
+    int num1 = 10, num2 = 5;
+    int *referencia,*referencia2;
+
+    referencia = &num1;
+    referencia2 = &num2;
+
+    cout<<"suma: "<<*referencia + *referencia2<<endl;
+
+    system("pause");
 }
