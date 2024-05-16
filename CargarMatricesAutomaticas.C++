@@ -12,6 +12,17 @@
 #include <cctype>
 using namespace std;
 
+#include <windows.h> // Necesario para las funciones de Windows
+
+// Función para mover el cursor a una posición específica en la consola
+void gotoxy(int x, int y) {
+    HANDLE hConsoleOutput;
+    COORD dwCursorPosition;
+    hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+    dwCursorPosition.X = x;
+    dwCursorPosition.Y = y;
+    SetConsoleCursorPosition(hConsoleOutput, dwCursorPosition);
+}
 // TODO LLENAR MATRIZ
 char **llenarMatriz(int &filas, int &columnas)
 {
